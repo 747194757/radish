@@ -1,19 +1,20 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Router from 'vue-router'
-const Home = () => import('../views/Home.vue')
-const Detail = () => import('../views/Detail.vue')
+
+
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path:'',
-    redirect:'/Home'
+    redirect:'/Detail'
   },
   {
     path: '/Home',
-    component: Home,
+    name: ' Home',
+    component: resolve => require(['@/views/Home'], resolve),
     meta: {
       title:'首页'
     },
@@ -21,7 +22,8 @@ const routes = [
   },
   {
     path: '/Detail',
-    component: Detail,
+    name: ' Detail',
+    component: resolve => require(['@/views/Detail'], resolve),
     meta: {
       title: '附近门店弹窗'
     },

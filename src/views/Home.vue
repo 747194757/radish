@@ -403,10 +403,7 @@ export default {
   margin-right: 30px;
 }
 
-// .to-participate {
-// margin-right: 20px
-// margin-top: 50
-// }
+
 .to-participate img {
   width: 110px;
   height: 55px;
