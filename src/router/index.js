@@ -9,7 +9,7 @@ Vue.use(VueRouter)
 const routes = [
   {
     path:'',
-    redirect:'/Detail'
+    redirect:'/Nearby-stores'
   },
   {
     path: '/Home',
@@ -27,7 +27,15 @@ const routes = [
     meta: {
       title: '附近门店弹窗'
     },
-  }
+  },
+  {
+    path: '/Nearby-stores',
+    name: ' Nearby-stores',
+    component: resolve => require(['@/views/Nearby-stores'], resolve),
+    meta: {
+      title: '附近门店'
+    },
+  },
 ]
 
 const router = new VueRouter({

@@ -1,30 +1,11 @@
 <template>
   <div class="Detail">
-    <div class="shouye">
-      <div class="nav-arrow">
-        <img src="../assets/css/nav-img/返回箭头.png" alt="" />
-      </div>
-      <div class="nav-text">附近门店</div>
-      <div class="nav-ation">
-        <img src="../assets/css/nav-img/单色_功能集合.png" alt="" />
-        <div class="nav-line">|</div>
-        <img src="../assets/css/nav-img/circle-圆圈.png" alt="" />
-      </div>
-    </div>
+   
 
     <!-- =====下总 -->
     <div class="box-inside">
-      <!-- 上盒子 -->
-      <div class="nearby-stores">
-        <div class="black-triangle">
-          <div class="near-brand">选择品牌</div>
-          <div class="near-brand-small"></div>
-        </div>
-        <div class="black-triangle">
-          <div class="choose-city">选择所在城市</div>
-          <div class="near-brand-small"></div>
-        </div>
-      </div>
+      
+      
       <!-- 下盒子 -->
       <div class="box-below">
         <div class="null-box"></div>
@@ -52,8 +33,11 @@
         </div>
       </div>
 
-      <!-- 阿飘 -->
-      <div class="float-up">
+      
+    </div>
+
+    <!-- 阿飘 -->
+    <div class="float-up">
         <div class="phnom-penh">
           <div class="flagship-store">
             <img src="../assets/css/home-img/旗舰店.png" alt="" />
@@ -98,7 +82,6 @@
             <img src="../assets/css/home-img/差.png" alt="">
           </div>
         </div>
-      </div>
     </div>
   </div>
 </template>
@@ -110,110 +93,21 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-boby  h4 span{
-  margin: 0
-  padding: 0
-}
-img{ 
-  border:0; 
-}
-.shouye {
-  position: fixed;
+body {
+  position:fixed;
   top: 0;
   left: 0;
-  right: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 66px;
-  width: 100vw;
-  background-color: black;
-
-  .nav-arrow img {
-    width: 23px;
-    height: 40px;
-    margin-left: 20px;
-  }
-}
-
-.nav-ation {
-  width: 100px;
-  height: 25px;
-  border-radius: 25px;
-  border: 1px solid white;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 20px;
-}
-
-.nav-text {
-  margin: 0 atuo;
-  font-size: 17px;
-  font-family: PingFangSC-Semibold, PingFang SC;
-  font-weight: 600;
-  color: #FFFFFF;
-  line-height: 24px;
-}
-
-.nav-line {
-  width: 1px;
-  color: white;
-  margin-left: 15px;
-  margin-right: 20px;
-}
-
-.nav-ation img {
-  width: 25px;
-  height: 25px;
-}
-
-// ----第二部分
-.box-inside {
-  padding-top: 66px;
-  height: 603px;
-}
-
-// 上
-.nearby-stores {
-  height: 50px;
+  margin: 0
+  padding: 0
+  width:100vw;
+  height: 100vh;
   background: #c0c0c0;
   box-shadow: 0px 0px 6px 4px rgba(0, 0, 0, 0.05);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
-.near-brand {
-  font-size: 14px;
-  font-family: PingFangSC-Semibold, PingFang SC;
-  font-weight: 600;
-  color: #101010;
-  line-height: 20px;
-  margin-left: 70px;
-}
 
-.choose-city {
-  font-size: 14px;
-  font-family: PingFangSC-Semibold, PingFang SC;
-  font-weight: 600;
-  color: #101010;
-  line-height: 20px;
-  margin-left: -190px;
-}
+// ----第二部分
 
-.near-brand-small {
-  margin-left: 10px;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 5px solid black;
-}
-
-.black-triangle {
-  display: flex;
-  align-items: center;
-}
 
 // 下
 .box-below {
@@ -221,131 +115,18 @@ img{
   background: rgba(0, 0, 0, 0.32);
 }
 
-.null-box {
-  height: 488px;
-}
 
-.offline-housekeeper {
-  display: flex;
-  height: 150px;
-  margin: 25px 20px;
-  background-color: rgba(0, 0, 0, 0.01);
-  justify-content: space-between;
-  align-items: center;
 
-  .flex-map {
-    display: flex;
-  }
-}
-
-offline-map img {
-  width: 140px;
-  height: 140px;
-  margin-left: 2px;
-  margin-top: 2PX;
-}
-
-.offline-text h4 {
-  margin-left: 15px;
-  font-size: 15px;
-  font-family: PingFangSC-Semibold, PingFang SC;
-  font-weight: 600;
-  color: #000000;
-  line-height: 21px;
-}
-
-.offline-text1 {
-  font-size: 13px;
-  font-family: PingFang-SC-Bold, PingFang-SC;
-  font-weight: bold;
-  color: #9FA1A0;
-  line-height: 19px;
-}
-
-.landmark {
-  display: flex;
-  margin-top: 3px;
-}
-
-.landmark img {
-  width: 15px;
-  height: 15px;
-  margin-left: 17px;
-  margin-rightn: 2px;
-}
 
 // 啊飘
-.float-up {
-  position: absolute;
-  top: 114px;
-  left: 20px;
-  width: 335px;
-  height: 518px;
-  background: #FFFFFF;
-}
 
-.phnom-penh {
-  width: 327px;
-  height: 508px;
-  border: 1px solid #E0CFAE;
-  margin: 4px;
-}
 
-.flagship-store img {
-  width: 315px;
-  height: 163px;
-}
 
-.flagship-text {
-  margin-top: 10px;
-}
-.flagship h4{
-  font-size: 14px;
-  font-family: PingFangSC-Semibold, PingFang SC;
-  font-weight: 600;
-  color: #000000;
-  line-height: 20px;
-  margin-top: 2px;
-  margin-left: 6px;
-}
 
-.clock-text img{
-  width: 10px;
- height: 10px; 
- margin-left: 9px;
- 
-}
-.clock-text span {
-  
-  font-size: 12px;
-  font-family: PingFangSC-Regular, PingFang SC;
-  font-weight: 400;
-  color: #9FA1A0;
-  line-height: 17px;
-}
-.map {
-  margin-top: 25px;
-  margin-left: 6px;
-  font-size: 14px;
-  font-family: PingFangSC-Semibold, PingFang SC;
-  font-weight: 600;
-  color: #000000;
-  line-height: 20px;
-}
-.preferential {
-  margin-top: 5px;
-  margin-left: 6px;
-  margin-bottom: 5px;
-  font-size: 11px;
-  font-family: PingFang-SC-Bold, PingFang-SC;
-  font-weight: bold;
-  color: #CEB68A;
-  line-height: 15px;
-}
-.map-img img{
-  width: 315px;
- height: 143px;
-}
+
+
+
+
 .immediately {
   position: absolute;
   right: 10px;
