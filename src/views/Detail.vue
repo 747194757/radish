@@ -1,161 +1,213 @@
 <template>
   <div class="Detail">
-   
+    <!-- 导航 -->
+    <div class="shouye">
+      <div class="nav-arrow">
+        <img src="../assets/css/nav-img/返回箭头.png" alt="" />
+      </div>
+      <div class="nav-text">活动列表</div>
+      <div class="nav-ation">
+        <img src="../assets/css/nav-img/单色_功能集合.png" alt="" />
+        <div class="nav-line">|</div>
+        <img src="../assets/css/nav-img/circle-圆圈.png" alt="" />
+      </div>
+    </div>
+    <!-- -------背景 -->
+    <div class="activity-figure">
+      <img src="../assets/css/datail-img/bj.png" alt="" />
 
-    <!-- =====下总 -->
-    <div class="box-inside">
-      
-      
-      <!-- 下盒子 -->
-      <div class="box-below">
-        <div class="null-box"></div>
-
-        <div class="offline-housekeeper">
-          <div class="flex-map">
-            <div class="offline-map">
-              <img
-                src="../assets/css/home-img/bcfe55eab677b8340bc19e67ea9149d.png"
-                alt=""
-              />
-            </div>
-
-            <div class="map-text">
-              <div class="offline-text">
-                <h4>上海闵行吴中路</h4>
-              </div>
-
-              <div class="landmark">
-                <img src="../assets/css/home-img/地图-地标.png" alt="" />
-                <div offline-text1>上海闵行吴中路1235号</div>
-              </div>
-            </div>
+     <!-- -------白盒子 -->
+     <div class="activity-xunhuan">
+       <div class="activity-bgc"  v-for="(item, index) in 3" :key="index">
+        <div class="activity-ber">
+          <div class="activity">
+            <img src="../assets/css/datail-img/活动.png" alt="" />
           </div>
+
+          <div class="buyinggai">
+            <div class="kic">
+              <div class="activity-kic">KIC 活动主题</div>
+              <div class="golden-box">
+                 进行中
+                </div>
+            </div>
+
+            <div class="introduce">
+              谈感性更讲理性，又方法更有创作观点，有能量更有知识分享。创意方法...
+            </div>
+            <div class="activity-time">
+              2019-03-21
+            </div>  
+          </div>
+
+          
         </div>
       </div>
-
+     </div>
       
-    </div>
-
-    <!-- 阿飘 -->
-    <div class="float-up">
-        <div class="phnom-penh">
-          <div class="flagship-store">
-            <img src="../assets/css/home-img/旗舰店.png" alt="" />
-          </div>
-
-          <div class="flagship-text">
-            <div class="flagship">
-              <h4>上海吴中路旗舰店</h4>
-            </div>
-            
-            <div class="clock-text">
-              <img src="../assets/css/home-img/时钟-fill.png" alt="">
-              <span>
-                周一到周五07：00-20：00，周六和周日08：00-18：00
-              </span>
-            </div>
-            <div class="clock-text">
-              <img src="../assets/css/home-img/位置.png" alt="">
-              <span>
-                上海闵行区吴中路1235号
-              </span>
-            </div>
-            <div class="clock-text">
-              <img src="../assets/css/home-img/手机.png" alt="">
-              <span>
-                021-65882938
-              </span>
-            </div>
-          </div>
-
-          <div class="map">门店地图</div>
-          <div class="preferential">现在预约，还可以享受6.5折优惠</div>
-          <div class="map-img">
-            <img src="../assets/css/home-img/地图.png" alt="" />
-          </div>
-
-          <div class="immediately">
-            <h4>立即预约</h4>
-          </div>
-
-          <div class="circle">
-            <img src="../assets/css/home-img/差.png" alt="">
-          </div>
-        </div>
     </div>
   </div>
 </template>
 <script>
 export default {
-  name: "Detail",
-  components: {},
+
 };
 </script>
-
 <style lang="stylus" scoped>
-body {
-  position:fixed;
+
+* body {
+  margin: 0;
+  padding: 0;
+}
+
+.shouye
+  position: fixed;
   top: 0;
   left: 0;
-  margin: 0
-  padding: 0
-  width:100vw;
-  height: 100vh;
-  background: #c0c0c0;
-  box-shadow: 0px 0px 6px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 66px;
+  width: 100vw;
+  background-color: black;
+  z-index: 100;
+  .nav-arrow img
+    width: 23px;
+    height: 40px;
+    margin-left: 20px;
+
+
+.nav-ation {
+  width: 100px;
+  height: 25px;
+  border-radius: 25px;
+  border: 1px solid white;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
 }
 
-
-// ----第二部分
-
-
-// 下
-.box-below {
-  height: 650px;
-  background: rgba(0, 0, 0, 0.32);
+.nav-text {
+  margin: 0 atuo;
+  font-size: 17px;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: 600;
+  color: #FFFFFF;
+  line-height: 24px;
 }
 
+.nav-line {
+  width: 1px;
+  color: white;
+  margin-left: 15px;
+  margin-right: 20px;
+}
+
+.nav-ation img {
+  width: 25px;
+  height: 25px;
+}
+// ----------------------
+.activity-figure {
+  // background: url("@/assets/css/datail-img/bj.png") no-replace;
+  // background-image: url('../assets/css/datail-img/bj.png') no-replace
+
+  top: 0;
+  left:0;
+  width 100vw;
+  height 100vh;
+  position: relative;
 
 
+}
+.activity-figure img {
+  width :100%;
+  height : 100%;
+}
 
-// 啊飘
-
-
-
-
-
-
-
-
-.immediately {
+.activity-xunhuan {
+  display: flex;
   position: absolute;
-  right: 10px;
-  bottom: -10px;
-  width: 103px;
-  height: 37px;
-  background: #CEB68A;
+  bottom: 80px;
+  width calc(100vw - 20px);
+  overflow: scroll;
+  background: rgbc(0,0,0,0);
 }
-.immediately h4 {
-  font-size: 12px;
+
+.activity-bgc {
+  
+  background: #fff;
+  opacity: 0.96;
+  width 1000px
+  margin-right: 20px;
+  margin-left: 20px;
+
+
+}
+.activity-ber {
+  display: flex;
+  margin: 4px;
+  border: 1px solid #E0CFAE;
+  width 311px
+}
+.activity img {
+
+ width: 111px;
+ height: 111px;
+ margin: 5px;
+}
+.kic {
+  display: flex;
+
+}
+.activity-kic {
+  maargin-left: 9px;
+  margin-top: 15px;
+  font-size: 15px;
   font-family: PingFangSC-Semibold, PingFang SC;
   font-weight: 600;
   color: #000000;
-  line-height: 7px;
-  text-align: center;
+  line-height: 21px;
 }
-.circle {
-  position: absolute;
-  right: -6px;
-  top: -10px;
-  border-radius: 50%;
-  width: 25px;
-  height: 25px;
-  background-color: #CEB68A;
+.golden-box {
+  
+  margin-top: 12px;
+  margin-left: 10px;
+  padding: 5px;
+  background: #CEB68A;
+  font-size: 9px;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: 600;
+  color: #000000;
 }
-.circle img {
-  margin-left: 3px;
-  margin-top: 3px;
-  width: 18px;
-  height: 18px;
+
+.introduce {
+  font-size: 10px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #000000;
+  line-height: 14px;
+  margin: 5px 10px 19px 9px;
+   text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  
+  -webkit-box-orient: vertical;
+ 
 }
+.activity-time {
+  font-size: 10px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #333333;
+  line-height: 14px;
+  margin-left: 9px ;
+  margin-bottom 16px;
+}
+
+
 </style>

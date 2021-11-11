@@ -9,7 +9,7 @@ Vue.use(VueRouter)
 const routes = [
   {
     path:'',
-    redirect:'/Nearby-stores'
+    redirect:'/Question-answer'
   },
   {
     path: '/Home',
@@ -25,7 +25,7 @@ const routes = [
     name: ' Detail',
     component: resolve => require(['@/views/Detail'], resolve),
     meta: {
-      title: '附近门店弹窗'
+      title: '活动列表'
     },
   },
   {
@@ -34,6 +34,62 @@ const routes = [
     component: resolve => require(['@/views/Nearby-stores'], resolve),
     meta: {
       title: '附近门店'
+    },
+  },
+  {
+    path: '/My-information',
+    name: ' My-information',
+    component: resolve => require(['@/views/My-information'], resolve),
+    meta: {
+      title: '我的'
+    },
+  },
+  {
+    path: '/My-copy',
+    name: ' My-copy',
+    component: resolve => require(['@/views/My-copy'], resolve),
+    meta: {
+      title: '我的copy'
+    },
+  },
+  {
+    path: '/KIC',
+    name: ' KIC',
+    component: resolve => require(['@/views/KIC'], resolve),
+    meta: {
+      title: '活动列表'
+    },
+  },
+  {
+    path: '/Activities',
+    name: ' Activities',
+    component: resolve => require(['@/views/Activities'], resolve),
+    meta: {
+      title: '活动列表'
+    },
+  },
+  {
+    path: '/No-activity',
+    name: ' No-activity',
+    component: resolve => require(['@/views/No-activity'], resolve),
+    meta: {
+      title: '暂无活动'
+    },
+  },
+  {
+    path: '/Spell-group',
+    name: ' Spell-group',
+    component: resolve => require(['@/views/Spell-group'], resolve),
+    meta: {
+      title: '拼团'
+    },
+  },
+  {
+    path: '/Question-answer',
+    name: ' Question-answer',
+    component: resolve => require(['@/views/Question-answer'], resolve),
+    meta: {
+      title: '问答'
     },
   },
 ]
