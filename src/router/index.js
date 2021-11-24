@@ -9,7 +9,7 @@ Vue.use(VueRouter)
 const routes = [
   {
     path:'',
-    redirect:'/Question-answer'
+    redirect:'/New-cart'
   },
   {
     path: '/Home',
@@ -90,6 +90,38 @@ const routes = [
     component: resolve => require(['@/views/Question-answer'], resolve),
     meta: {
       title: '问答'
+    },
+  },
+  {
+    path: '/List-Problem',
+    name: ' List-Problem',
+    component: resolve => require(['@/views/List-Problem'], resolve),
+    meta: {
+      title: '问答列表'
+    },
+  },
+  {
+    path: '/add',
+    name: 'add',
+    component: resolve => require(['@/views/js/add'], resolve),
+    meta: {
+      title: '添加'
+    },
+  },
+  {
+    path: '/Shopping-cart',
+    name: 'Shopping-cart',
+    component: resolve => require(['@/views/Shopping-cart'], resolve),
+    meta: {
+      title: '购物车'
+    },
+  },
+  {
+    path: '/New-cart',
+    name: 'New-cart',
+    component: resolve => require(['@/views/New-cart'], resolve),
+    meta: {
+      title: '新的购物车'
     },
   },
 ]

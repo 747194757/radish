@@ -217,9 +217,9 @@ export default {};
     }
     .money-text {
       margin-left: 2px;
-      background: rgba(188, 0, 23, 1);
+      background: rgba(188, 0, 23, 0.11);
       border-radius: 4px;
-      opacity: 0.11869999999999999;
+      
       padding: 2px 4px;
      .money-text-red {
         font-size: 9px;
