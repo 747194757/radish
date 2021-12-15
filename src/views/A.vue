@@ -37,3 +37,5 @@ export default {
 };
 </script>
 <style lang="stylus" scoped></style>
+
+我是傻逼
