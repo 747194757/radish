@@ -7,6 +7,7 @@
 </template>
 <script>
 export default {
+  //新增加分支
   data() {
     return {
       shuxing:'属性'
