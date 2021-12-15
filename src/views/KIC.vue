@@ -5,7 +5,7 @@
       <div class="nav-arrow">
         <img src="../assets/css/nav-img/返回箭头.png" alt="" />
       </div>
-      <div class="nav-text">活动列表</div>
+      <div class="nav-text">列表</div>
       <div class="nav-ation">
         <img src="../assets/css/nav-img/单色_功能集合.png" alt="" />
         <div class="nav-line">|</div>
@@ -33,7 +33,7 @@
           通往远方，让灵感飞翔!2017年国际家居流行趋势的关键词为「远方Far
           Away」，这个精神将以四个主题为切入点展现。
         </div>
-        <div class="participate">
+        <div @click="Participate('aa')" class="participate">
           参加活动
         </div>
       </div>
@@ -43,7 +43,20 @@
   </div>
 </template>
 <script>
-export default {};
+export default {
+  data() {
+    return {
+
+    }
+  },
+  methods: {
+    Participate(val) {
+      if(val == 'aa') {
+        this.$router.push({path:'Activities'})
+      }
+    }
+  }
+};
 </script>
 <style lang="stylus" scoped>
 * body {

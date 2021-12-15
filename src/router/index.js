@@ -9,7 +9,7 @@ Vue.use(VueRouter)
 const routes = [
   {
     path:'',
-    redirect:'/New-cart'
+    redirect:'/A'
   },
   {
     path: '/Home',
@@ -124,6 +124,95 @@ const routes = [
       title: '新的购物车'
     },
   },
+  {
+    path: '/Classification',
+    name: 'Classification',
+    component: resolve => require(['@/views/Classification'], resolve),
+    meta: {
+      title: '分类'
+    },
+  },
+  {
+    path: '/Bblailai',
+    name: 'Bblailai',
+    component: resolve => require(['@/views/Bblailai'], resolve),
+    meta: {
+      title: '这是演习不是实战'
+    },
+  },
+  {
+    path: '/Bblailai',
+    name: 'Bblailai',
+    component: resolve => require(['@/views/Bblailai'], resolve),
+    meta: {
+      title: '这是演习不是实战'
+    },
+  },
+  {
+    path: '/Goods-details',
+    name: 'Goods-details',
+    component: resolve => require(['@/views/Goods-details'], resolve),
+    meta: {
+      title: '商品详情页'
+    },
+  },
+  {
+    path: '/Search',
+    name: 'Search',
+    component: resolve => require(['@/views/Search'], resolve),
+    meta: {
+      title: '搜索'
+    },
+  },
+  {
+    path: '/TheSofa',
+    name: 'TheSofa',
+    component: resolve => require(['@/views/TheSofa'], resolve),
+    meta: {
+      title: '沙发'
+    },
+  },
+  {
+    path: '/A',
+    name: 'A',
+    component: resolve => require(['@/views/A'], resolve),
+    meta: {
+      title: '沙发'
+    },
+  },
+  {
+    path: '/B',
+    name: 'B',
+    component: resolve => require(['@/views/B'], resolve),
+    meta: {
+      title: '沙发'
+    },
+  },
+  {
+    path: '/C',
+    name: 'C',
+    component: resolve => require(['@/views/C'], resolve),
+    meta: {
+      title: '沙发'
+    },
+  },
+  {
+    path: '/BondRating',
+    name: 'BondRating',
+    component: resolve => require(['@/views/BondRating'], resolve),
+    meta: {
+      title: '债券评级'
+    },
+  },
+  {
+    path: '/Fund-list',
+    name: 'Fund-list',
+    component: resolve => require(['@/views/Fund-list'], resolve),
+    meta: {
+      title: '基金列表'
+    },
+  },
+  
 ]
 
 const router = new VueRouter({

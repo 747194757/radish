@@ -33,7 +33,7 @@
           通往远方，让灵感飞翔!2017年国际家居流行趋势的关键词为「远方Far
           Away」，这个精神将以四个主题为切入点展现。
         </div>
-        <div class="participate">
+        <div @click="showMod(false)" class="participate">
           参加活动
         </div>
       </div>
@@ -42,18 +42,35 @@
     </div>
 
     <!-- ---- -->
-    <div class="successful">
+    <!-- :style="{display: showModal == false ? 'none' : 'block'}" -->
+    <div :style="{display: showModal == true ? 'none' : 'block'}" class="successful">
       <div class="wind">
         <div class="successful-text">参与成功</div>
         <div class="successful-congratulations">恭喜你，成功参与此活动</div>
         <div class="ber-ful"></div>
-        <div class="successful-know">知道了</div>
+        <div @click="knowBtn(true)" class="successful-know">知道了</div>
       </div>
     </div>
   </div>
 </template>
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      showModal:'',
+    }
+  },
+  methods: {
+    knowBtn(val) {
+      console.log(val); 
+      // this.showModal = !this.showModal
+      this.showModal = val
+    },
+    showMod(val) {
+      this.showModal = val
+    }
+  }
+};
 </script>
 <style lang="stylus" scoped>
 * body {

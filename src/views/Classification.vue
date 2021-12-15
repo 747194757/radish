@@ -27,18 +27,24 @@
     </div>
 
     <div class="side-navigation">
-      <div>
-        <div v-for="(item, index) in array" :key="index" class="navigation-bar">
-          <div @click="sideBar(index)" class="navigation-text">
+      <div class="side">
+        <div
+          v-for="(item, index) in array"
+          :key="index"
+          :class="[index == arrayIndex ? 'sofa-select' : 'navigation-bar']"
+          @click="clickArray(index)"
+        >
+          <div class="navigation-text">
             {{ item.name }}
           </div>
         </div>
       </div>
 
-      <div class="navigation-img">
-        <div>
-          <img src="" alt="" />
-        </div>
+      <div class="right-box">
+       <div class="right-son"  v-for="(item, index) of array[arrayIndex].sofa" :key="index">
+          <img class="right-img" :src="item.rigImg" alt="" />
+          <div class="right-text">{{item.rigText}}</div>
+         </div> 
       </div>
     </div>
   </div>
@@ -49,15 +55,203 @@ export default {
   data() {
     return {
       array: [
-        { name: "床上四件套" },
+        {
+          name: "床上四件套",
+          sofa: [
+            {
+              rigImg: require("@/assets/css/datail-img/椅子.png"),
+              rigText: "四件套",
+            },
+            {
+              rigImg: require("@/assets/css/datail-img/yello.png"),
+              rigText: "枕套",
+            },
+            {
+              rigImg: require("@/assets/css/datail-img/椅子.png"),
+              rigText: "床单",
+            },
+            {
+              rigImg: require("@/assets/css/datail-img/椅子.png"),
+              rigText: "四件套",
+            },
+            {
+              rigImg: require("@/assets/css/datail-img/yello.png"),
+              rigText: "枕套",
+            },
+            {
+              rigImg: require("@/assets/css/datail-img/椅子.png"),
+              rigText: "床单",
+            },
+            {
+              rigImg: require("@/assets/css/datail-img/椅子.png"),
+              rigText: "四件套",
+            },
+            {
+              rigImg: require("@/assets/css/datail-img/yello.png"),
+              rigText: "枕套",
+            },
+            {
+              rigImg: require("@/assets/css/datail-img/椅子.png"),
+              rigText: "床单",
+            },
+            {
+              rigImg: require("@/assets/css/datail-img/椅子.png"),
+              rigText: "四件套",
+            },
+            {
+              rigImg: require("@/assets/css/datail-img/yello.png"),
+              rigText: "枕套",
+            },
+            {
+              rigImg: require("@/assets/css/datail-img/椅子.png"),
+              rigText: "床单",
+            },
+            {
+              rigImg: require("@/assets/css/datail-img/椅子.png"),
+              rigText: "四件套",
+            },
+            {
+              rigImg: require("@/assets/css/datail-img/yello.png"),
+              rigText: "枕套",
+            },
+            {
+              rigImg: require("@/assets/css/datail-img/椅子.png"),
+              rigText: "床单",
+            },
+            {
+              rigImg: require("@/assets/css/datail-img/椅子.png"),
+              rigText: "四件套",
+            },
+            {
+              rigImg: require("@/assets/css/datail-img/yello.png"),
+              rigText: "枕套",
+            },
+            {
+              rigImg: require("@/assets/css/datail-img/椅子.png"),
+              rigText: "床单",
+            },
+          ],
+        },
         { name: "沙发" },
-        { name: "抱枕" },
-        { name: "茶具" },
-        { name: "艺术插件" },
-        { name: "音箱" },
-        { name: "充电宝" },
-        { name: "餐桌" },
-        { name: "酒柜" },
+        {
+          name: "抱枕",
+          sofa: [
+            {
+              rigImg: require("@/assets/css/datail-img/椅子.png"),
+              rigText: "四人沙发",
+            },
+            {
+              rigImg: require("@/assets/css/datail-img/yello.png"),
+              rigText: "单人沙发",
+            },
+            {
+              rigImg: require("@/assets/css/datail-img/椅子.png"),
+              rigText: "木质沙发",
+            },
+          ],
+        },
+        {
+          name: "茶具",
+          sofa: [
+            {
+              rigImg: require("@/assets/css/datail-img/椅子.png"),
+              rigText: "杯子",
+            },
+            {
+              rigImg: require("@/assets/css/datail-img/yello.png"),
+              rigText: "茶叶",
+            },
+            {
+              rigImg: require("@/assets/css/datail-img/椅子.png"),
+              rigText: "茶宠",
+            },
+          ],
+        },
+        {
+          name: "艺术插件",
+          sofa: [
+            {
+              rigImg: require("@/assets/css/datail-img/椅子.png"),
+              rigText: "油画",
+            },
+            {
+              rigImg: require("@/assets/css/datail-img/yello.png"),
+              rigText: "插花",
+            },
+            {
+              rigImg: require("@/assets/css/datail-img/椅子.png"),
+              rigText: "木雕",
+            },
+          ],
+        },
+        {
+          name: "音箱",
+          sofa: [
+            {
+              rigImg: require("@/assets/css/datail-img/椅子.png"),
+              rigText: "大音响",
+            },
+            {
+              rigImg: require("@/assets/css/datail-img/yello.png"),
+              rigText: "小音箱",
+            },
+            {
+              rigImg: require("@/assets/css/datail-img/椅子.png"),
+              rigText: "木质音箱",
+            },
+          ],
+        },
+        {
+          name: "充电宝",
+          sofa: [
+            {
+              rigImg: require("@/assets/css/datail-img/椅子.png"),
+              rigText: "5000毫安",
+            },
+            {
+              rigImg: require("@/assets/css/datail-img/yello.png"),
+              rigText: "4500毫安",
+            },
+            {
+              rigImg: require("@/assets/css/datail-img/椅子.png"),
+              rigText: "8900毫安",
+            },
+          ],
+        },
+        {
+          name: "餐桌",
+          sofa: [
+            {
+              rigImg: require("@/assets/css/datail-img/椅子.png"),
+              rigText: "白色餐桌",
+            },
+            {
+              rigImg: require("@/assets/css/datail-img/yello.png"),
+              rigText: "红色餐桌",
+            },
+            {
+              rigImg: require("@/assets/css/datail-img/椅子.png"),
+              rigText: "木质餐桌",
+            },
+          ],
+        },
+        {
+          name: "酒柜",
+          sofa: [
+            {
+              rigImg: require("@/assets/css/datail-img/椅子.png"),
+              rigText: "四人沙发",
+            },
+            {
+              rigImg: require("@/assets/css/datail-img/yello.png"),
+              rigText: "单人沙发",
+            },
+            {
+              rigImg: require("@/assets/css/datail-img/椅子.png"),
+              rigText: "木质沙发",
+            },
+          ],
+        },
         { name: "茶几" },
         { name: "玄关柜" },
         { name: "厨房" },
@@ -68,11 +262,17 @@ export default {
         { name: "玄关柜" },
         { name: "厨房" },
       ],
+      arrayIndex: 3,
       value: "",
     };
   },
   methods: {
-    sideBar(index) {},
+    clickArray(index) {
+      console.log(index);
+      this.arrayIndex = index;
+      console.log(this.array[index].sofa);
+    },
+
   },
 };
 </script>
@@ -156,17 +356,19 @@ export default {
 
   .side-navigation {
     display: flex;
-    flex-direction:column;
-    overflow: hidden;
-    overflow-y: scroll;
     height :calc(100vh - 66px - 79px - 49px);
-    width 90px;
+    .side {
+      // min-width: 90px;//最小宽度 不允许变得更小
+      // flex-shrink: 1;// 不允许变得更小
+      width: 90px;
+      height :calc(100vh - 66px - 79px - 49px);
+      flex-direction:column;
+      overflow: hidden;
+      overflow-y: scroll;
       .navigation-bar {
-
         width: 88px;
         height: 50px;
         background:  #F5F5F5;
-
         .navigation-text {
           font-size: 14px;
           font-family: PingFangSC-Regular, PingFang SC;
@@ -176,13 +378,53 @@ export default {
           text-align: center;
           line-height: 50px;
 
+        }
+      }
+      .sofa-select {
+        width: 88px;
+        height: 50px;
+        background: #FFFFFF;
+        .navigation-text {
+          font-size: 14px;
+          font-family: PingFangSC-Regular, PingFang SC;
+          font-weight: 400;
+          color: #CEB68A;
+          line-height: 20px;
+          text-align: center;
+          line-height: 50px;
 
         }
       }
-      .navigation-img {
+    }
+    .right-box {
+        width: calc(100vw - 90px);
+        display: flex;
+        flex-wrap: wrap;
+        background: #FFFFFF;
+        align-content: flex-start
+        text-align: center
+        height :calc(100vh - 66px - 79px - 49px);
+        overflow hidden
+        overflow-y: scroll
+        .right-son {
+          width 50%
+          height: 150px;
+          .right-img{
+            width: 55px;
+            height: 68px;
 
+
+          }
+          .right-text{
+            margin-top: 10px;
+            font-size: 13px;
+            font-family: PingFangSC-Medium, PingFang SC;
+            font-weight: 500;
+            color: #000000;
+            line-height: 19px;
+          }
+        }
       }
-
   }
 }
 </style>
